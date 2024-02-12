@@ -3,4 +3,5 @@ import Button from "./Button";
 import Container from "./Container";
 import Navbar from "./navbar/Navbar";
 import Hero from "./hero/Hero";
-export { Spinner, Button, Container, Navbar, Hero };
+import Syllabus from "./syllabus/Syllabus";
+export { Spinner, Button, Container, Navbar, Hero, Syllabus };
