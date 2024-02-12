@@ -1,19 +1,15 @@
 "use client";
 
+import { Button } from "..";
+
 interface MenuItemProps {
   onClick: () => void;
   label: string;
+  iconRight?: React.ReactElement;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ onClick, label }) => {
-  return (
-    <div
-      onClick={onClick}
-      className="cursor-pointer px-4 py-3 hover:bg-neutral-100 transition font-semibold"
-    >
-      {label}
-    </div>
-  );
+const MenuItem: React.FC<MenuItemProps> = ({ onClick, label, iconRight }) => {
+  return <Button outline text={label} icon={iconRight} onClick={onClick} buttonStyle="cursor-pointer px-4 py-3 text-black transition font-semibold" />;
 };
 
 export default MenuItem;
