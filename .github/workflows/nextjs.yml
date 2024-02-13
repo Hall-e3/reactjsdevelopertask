@@ -97,4 +97,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           echo "Deploying..."
+          ls -la ./public  # List contents of the public directory
           cat ./public/index.html
+
+          cat ./public/path/to/index.html
