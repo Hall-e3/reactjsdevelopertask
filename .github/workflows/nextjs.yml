@@ -78,7 +78,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: nextjs-output
+          name: pages # Change this to 'pages'
           path: .next
 
   # Deployment job
