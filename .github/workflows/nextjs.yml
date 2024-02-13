@@ -94,6 +94,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          # Your deployment commands here
           echo "Deploying..."
-          cat ./out/index.html  # Example: Check the content of the downloaded artifact
+          cat ./out/index.html
