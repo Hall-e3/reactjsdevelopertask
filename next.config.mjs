@@ -1,12 +1,9 @@
-/**
- * @type {import('next').NextConfig}
- */
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   basePath: isProd ? "/reactjsdevelopertask" : "",
   output: "export",
-  distDir: "dist",
+  distDir: "dist", // Update this line
   images: {
     unoptimized: true
   }
