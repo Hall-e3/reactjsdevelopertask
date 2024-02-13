@@ -1,13 +1,13 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
 const nextConfig = {
-  experimental: {
-    images: false // Assuming you don't need the experimental images feature
-  },
+  // Your Next.js configuration options go here
+  // For example:
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     return {
       "/": { page: "/" }
+      // Add other pages as needed
     };
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;
