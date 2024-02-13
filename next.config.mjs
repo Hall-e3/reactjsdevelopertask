@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export"
-};
+module.exports = {
+  // Other Next.js configurations...
 
-export default nextConfig;
+  // Add the following export configuration
+  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+    return {
+      "/": { page: "/" }
+      // Add other pages as needed
+    };
+  }
+};
