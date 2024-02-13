@@ -2,6 +2,7 @@
   "name": "reactjsdevelopertask",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Hall-e3.github.io/reactjsdevelopertask",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
