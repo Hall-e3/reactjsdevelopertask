@@ -96,7 +96,7 @@ jobs:
           name: my-artifact
           path: ./public
       - name: Debug Deployment URL
-        run: echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
+        run: echo "${{ steps.deployment.outputs.page_url }}"
       - name: Deploy to GitHub Pages
         run: |
           echo "Deploying..."
