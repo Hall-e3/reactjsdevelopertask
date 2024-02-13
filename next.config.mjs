@@ -1,13 +1,15 @@
-// next.config.mjs
+/**
+ * @type {import('next').NextConfig}
+ */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  // Your Next.js configuration options go here
-  // For example:
-  exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
-    return {
-      "/": { page: "/" }
-      // Add other pages as needed
-    };
+  basePath: isProd ? "/reactjsdevelopertask" : "",
+  output: "export",
+  distDir: "dist",
+  images: {
+    unoptimized: true
   }
 };
 
-export default nextConfig;
+module.exports = nextConfig;
