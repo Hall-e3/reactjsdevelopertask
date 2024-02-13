@@ -93,6 +93,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages 🚀
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
+          path: ./public
+      - name: Debug Deployment URL
+        run: echo "${{ steps.deployment.outputs.page_url }}"
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "Deploying..."
+          ls -la ./public  # List contents of the public directory
+          find ./public -type f
