@@ -1,18 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Avatar from "../Avatar";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-export default function Syllabus() {
-  const [syllabuses, setSyllabuses] = useState<{ name: string }[]>([]);
-
-  useEffect(() => {
-    fetch("/api/syllabuses")
-      .then((response) => response.json())
-      .then((data) => setSyllabuses(data));
-  }, []);
-
-
+export default function SyllabusList({ syllabuses }: { syllabuses: { id: number; name: string }[] }) {
   return (
     <section className="py-20 bg-[#f9f9f9]">
       <div className="max-w-[1260px] mx-auto py-10 h-full">
