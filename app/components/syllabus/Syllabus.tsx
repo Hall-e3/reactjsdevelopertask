@@ -2,13 +2,17 @@
 import React from "react";
 import Avatar from "../Avatar";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useSyllabusContext } from "@/app/context/SyllabusContext";
+import { Spinner } from "..";
 
-export default function SyllabusList({ syllabuses }: { syllabuses: { id: number; name: string }[] }) {
+export default function SyllabusList() {
+  const { state } = useSyllabusContext();
   return (
-    <section className="py-20 bg-[#f9f9f9]">
+    <section className="sm:py-20 bg-[#f9f9f9] px-6 md:px-0">
       <div className="max-w-[1260px] mx-auto py-10 h-full">
+        {state.loading && <Spinner styles="h-4.5 w-4.5 border-2" />}
         <div className="flex flex-col space-y-2">
-          {syllabuses.map((syllabus, index) => (
+          {state.syllabuses.map((syllabus, index) => (
             <div key={index} className="flex items-center justify-between border-b py-3">
               <div className="flex flex-row items-center space-x-3">
                 <Avatar src="/images/math-calculator.png" styles="object-contain" alt="avatar" height={50} width={50} />

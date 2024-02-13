@@ -9,14 +9,14 @@ export default function Hero() {
     <Container>
       <section className="py-20">
         <div className="flex flex-row gap-3">
-          <div className="w-full h-full ">
+          <div className="w-full h-full hidden sm:block">
             <Avatar src="/images/Enoch.jpeg" styles="object-cover h-full w-full rounded-3xl" alt="avatar" height={100} width={100} />
           </div>
-          <div className="flex flex-col justify-center px-6 space-y-2">
+          <div className="w-full flex flex-col justify-center px-6 space-y-2 bg-mobileBackgroundImage md:bg-none">
             <p className="text-gray_color text-[20px] font-medium">For every student, every classroom. Real results.</p>
             <p className="text-[13px] sm:text-[15px]">We are a nonprofit with the mission to provide a free, world-class education for anyone, anywhere.</p>
-            <div>
-              <Button text="Start here" onClick={() => {}} buttonStyle="px-5 py-3 rounded-md" />
+            <div className="w-full">
+              <Button text="Start here" onClick={() => {}} buttonStyle="px-5 py-3 rounded-md bg-blue-700 text-white" />
             </div>
           </div>
         </div>
