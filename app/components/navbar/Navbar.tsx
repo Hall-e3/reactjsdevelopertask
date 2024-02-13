@@ -27,14 +27,14 @@ const Navbar = () => {
                 iconRight={<MagnifyingGlassIcon className="h-5 w-5" />}
               />
             </div>
-            <Logo />
+            <Logo logo />
             <div className="hidden md:flex md:items-center md:space-x-6">
               <MenuItem onClick={() => {}} label="Donate" iconRight={<ArrowTopRightOnSquareIcon className="h-5 w-5" />} />
               <MenuItem onClick={() => {}} label="Login" />
               <MenuItem onClick={() => {}} label="Sign up" />
             </div>
 
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6 md:hidden">
               <MagnifyingGlassIcon className="h-6 w-6 text-blue-700" />
               <Bars3Icon className="h-6 w-6 text-blue-700" />
             </div>

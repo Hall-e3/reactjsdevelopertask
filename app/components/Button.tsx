@@ -19,8 +19,8 @@ export default function Button({ text, buttonStyle, onClick, icon, type, disable
       disabled={disabled}
       type={type}
       className={`${buttonStyle} text-[13px] disabled:opacity-70 disabled:cursor-not-allowed ${
-        outline ? "bg-white border-black " : "bg-rose-500 border-rose-500 "
-      } ${small ? "py-1 text-sm font-light border-[1px]" : " text-md font-semibold"}`}
+        small ? "py-1 text-sm font-light border-[1px]" : " text-md font-semibold"
+      }`}
       onClick={onClick}>
       <div className="flex items-center space-x-2 justify-center">
         {leftIcon && <div>{leftIcon}</div>}

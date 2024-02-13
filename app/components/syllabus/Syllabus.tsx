@@ -10,7 +10,7 @@ export default function SyllabusList() {
   return (
     <section className="sm:py-20 bg-[#f9f9f9] px-6 md:px-0">
       <div className="max-w-[1260px] mx-auto py-10 h-full">
-        {state.loading && <Spinner styles="h-4.5 w-4.5 border-2" />}
+        {state.loading && <div className="align-center text-center">Loading....</div>}
         <div className="flex flex-col space-y-2">
           {state.syllabuses.map((syllabus, index) => (
             <div key={index} className="flex items-center justify-between border-b py-3">

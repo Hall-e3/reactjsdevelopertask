@@ -13,7 +13,7 @@ const Logo = ({ text, logo }: LogoProps) => {
   const router = useRouter();
   return (
     <div>
-      {logo && <Image onClick={() => router.push("/")} src="/images/logo.png" alt="logo" className="cursor-pointer" height="100" width="100" />}
+      {logo && <Image onClick={() => router.push("/")} src="/images/logo.png" alt="logo" className="cursor-pointer" height="50" width="80" />}
       {text && <h4>{text}</h4>}
     </div>
   );
