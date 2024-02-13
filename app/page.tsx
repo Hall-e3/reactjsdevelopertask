@@ -1,4 +1,4 @@
-
+"use client";
 import { Hero, Navbar, SyllabusList } from "./components";
 import { SyllabusProvider } from "./context/SyllabusContext";
 
